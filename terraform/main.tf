@@ -23,17 +23,17 @@ resource "aws_ecs_cluster" "main" {
 
 # S3 
 resource "aws_s3_bucket" "code-bucket" {
-  bucket = "hackathon-grupo12-fiap-code-bucket"
+  bucket = "hackathon-grupo12-fiap-code-bucket1"
 }
 
 # S3 Arquivos out
 resource "aws_s3_bucket" "files-in-bucket" {
-  bucket = "hackathon-grupo12-fiap-files-in-bucket"
+  bucket = "hackathon-grupo12-fiap-files-in-bucket1"
 }
 
 # S3 Arquivos in
 resource "aws_s3_bucket" "files-out-bucket" {
-  bucket = "hackathon-grupo12-fiap-files-out-bucket"
+  bucket = "hackathon-grupo12-fiap-files-out-bucket1"
 }
 
 data "aws_iam_policy_document" "queue_policy" {
