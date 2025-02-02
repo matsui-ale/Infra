@@ -26,12 +26,12 @@ jobs:
           with:
             aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
             aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-            aws-region: sa-east-1
+            aws-region: 
 
-        - name: Verificando se bucket 'tfstate-grupo12-fiap-2025' está criado
+        - name: Verificando se bucket 'tfstate-grupo12-fiap-20251' está criado
           if: github.ref == 'refs/heads/main' && github.event_name == 'push'
           run: |
-              BUCKET_NAME="tfstate-grupo12-fiap-2025"
+              BUCKET_NAME="tfstate-grupo12-fiap-20251"
               REGION="sa-east-1"
           
               if ! aws s3api head-bucket --bucket "$BUCKET_NAME" 2>/dev/null; then
